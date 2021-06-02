@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React from 'react'
+import { Image, Text, TouchableOpacity, View } from 'react-native'
 import styles from './styles';
 import { firebase } from '../../firebase/config'
 
@@ -7,6 +7,10 @@ export default function HomePage({navigation}) {
 
     const onAssessPress = () => {
         navigation.navigate('Assessment')
+    }
+
+    const onProfilePress = () => {
+        navigation.navigate('Profile')
     }
 
     const onLogoutPress = () => {
@@ -20,21 +24,29 @@ export default function HomePage({navigation}) {
         <View style={styles.container}>
             <View style={styles.formContainer}>
 
-            <TouchableOpacity
-                    onPress={() => onAssessPress()}>
-                        <Image 
-                            source = {require('../../../assets/checkin.png')} 
-                            style = {styles.ImageIconStyle}
-                        />
+             <TouchableOpacity 
+                onPress={() => onAssessPress()}> 
+                    <Image  
+                        source = {require('../../../assets/checkin.png')}  
+                        style = {styles.ImageIconStyle} 
+                    /> 
+                    <View style={styles.SeparatorLine} /> 
+             </TouchableOpacity> 
 
-                        <View style={styles.SeparatorLine} />
-            </TouchableOpacity>
+             <TouchableOpacity 
+                onPress={() => onProfilePress()}> 
+                    <Image  
+                        source = {require('../../../assets/checkin.png')}  
+                        style = {styles.ImageIconStyle} 
+                    /> 
+                    <View style={styles.SeparatorLine} /> 
+             </TouchableOpacity> 
 
             <TouchableOpacity
                     style={styles.button}
                     onPress={() => onLogoutPress()}>
                     <Text style={styles.buttonTitle}>Log Out</Text>
-                </TouchableOpacity>
+            </TouchableOpacity>
 
 
             </View>

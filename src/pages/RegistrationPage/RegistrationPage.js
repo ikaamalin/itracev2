@@ -5,6 +5,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import styles from './styles';
 
 export default function RegistrationPage({navigation}) {
+
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [matricNum, setMatricNum] = useState('')
@@ -15,7 +16,7 @@ export default function RegistrationPage({navigation}) {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const onFooterLinkPress = () => {
-        navigation.navigate('Login')
+        props.navigation.navigate('Login')
     }
 
     const onRegisterPress = () => {
@@ -28,14 +29,17 @@ export default function RegistrationPage({navigation}) {
             .createUserWithEmailAndPassword(email, password)
             .then((response) => {
                 const uid = response.user.uid
+                const timestamp = firebase.firestore.FieldValue.serverTimestamp();
                 const data = {
-                    id: uid,
+                    authorID: uid,
                     fullName,
                     email,
                     matricNum,
                     kulliyyah,
                     contactNum,
                     address,
+                    createdAt: timestamp,
+
                 };
                 const usersRef = firebase.firestore().collection('users')
                 usersRef

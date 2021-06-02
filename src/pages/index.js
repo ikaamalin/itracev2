@@ -8,3 +8,9 @@ export { default as AssessmentPage } from './AssessmentPage/AssessmentPage'
 
 export { default as displayAssess } from './displayAssess/displayAssess'
 
+export { default as CheckinPage } from './CheckinPage/CheckinPage'
+
+export { default as Scanner } from './Scanner/Scanner'
+
+export { default as ProfilePage } from './ProfilePage/ProfilePage'
+

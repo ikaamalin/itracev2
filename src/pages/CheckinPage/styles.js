@@ -1,19 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
+
     container: {
         flex: 1,
         alignItems: 'center'
-    },
-
-    preloader: {
-        left: 0,
-        right: 0,
-        top: 0,
-        bottom: 0,
-        position: 'absolute',
-        alignItems: 'center',
-        justifyContent: 'center'
     },
 
     logo: {
@@ -24,16 +15,11 @@ export default StyleSheet.create({
         margin: 30
     },
 
-    input: {
-        height: 48,
-        borderRadius: 5,
-        overflow: 'hidden',
-        backgroundColor: 'white',
-        marginTop: 10,
-        marginBottom: 10,
-        marginLeft: 30,
-        marginRight: 30,
-        paddingLeft: 16
+    word: {
+        flex: 1,
+        marginLeft: 500,
+        marginTop: 50,
+        fontSize: 30,
     },
 
     button: {
@@ -52,5 +38,4 @@ export default StyleSheet.create({
         fontSize: 16,
         fontWeight: "bold"
     },
-
 })

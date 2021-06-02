@@ -3,7 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { firebase } from './src/firebase/config'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { LoginPage, HomePage, RegistrationPage, AssessmentPage, displayAssess } from './src/pages'
+import { LoginPage, 
+          HomePage, 
+          RegistrationPage, 
+          AssessmentPage, 
+          displayAssess, 
+          CheckinPage, 
+          Scanner,
+          ProfilePage,
+        } from './src/pages'
 import {decode, encode} from 'base-64'
 if (!global.btoa) {  global.btoa = encode }
 if (!global.atob) { global.atob = decode }
@@ -64,6 +72,18 @@ export default function App() {
               name="DisplayAssess" 
               component={ displayAssess }
               options = {{ title: 'Quarantine Health Assessment'}} />
+            <Stack.Screen 
+              name="Checkin" 
+              component={ CheckinPage }
+              options = {{ title: 'Home'}} />
+            <Stack.Screen 
+              name="Scanner" 
+              component={ Scanner }
+              options = {{ title: 'Scan QR Code'}} />
+            <Stack.Screen 
+              name="Profile" 
+              component={ ProfilePage }
+              options = {{ title: 'Profile'}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

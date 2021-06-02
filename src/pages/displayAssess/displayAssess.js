@@ -79,7 +79,6 @@ class displayAssess extends Component {
                         )}
                     </ul>
                     
-
                     <Text style = {styles.word}>2) How are you feeling today?</Text>
                     <ul>
                         {dataSource.map(item =>
@@ -96,12 +95,16 @@ class displayAssess extends Component {
                         {dataSource.map(item =>
                     
                         <p>
-                        Coughs {item.coughs} 
+                        {item.coughs} 
+                        {item.fever}
+                        {item.sorethroat}
+                        {item.fatigue}
+                        {item.losstaste}
+                        {item.chestpain}
+                        {item.breathing}
                         
                         </p>
-
                         )}
-
                     </ul>
 
                     <Text style = {styles.word}>4) Since when have you started experiencing the symptoms?</Text>
@@ -115,7 +118,6 @@ class displayAssess extends Component {
                         )}
                     </ul>
                     
-
                     <Text style = {styles.word}>5) List down the places you frequently visited for today.</Text>
                     <ul>
                         {dataSource.map(item =>
@@ -127,7 +129,6 @@ class displayAssess extends Component {
                         )}
                     </ul>
                     
-
                 </KeyboardAwareScrollView>
               </View>
 
