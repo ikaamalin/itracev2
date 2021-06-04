@@ -35,7 +35,7 @@ export default function HomePage({navigation}) {
              <TouchableOpacity 
                 onPress={() => onAssessPress()}> 
                     <Image  
-                        source = {require('../../../assets/checkin.png')}  
+                        source = {require('../../../assets/health.png')}  
                         style = {styles.ImageIconStyle} 
                     /> 
                     <View style={styles.SeparatorLine} /> 
@@ -44,7 +44,7 @@ export default function HomePage({navigation}) {
              <TouchableOpacity 
                 onPress={() => onProfilePress()}> 
                     <Image  
-                        source = {require('../../../assets/checkin.png')}  
+                        source = {require('../../../assets/profile.png')}  
                         style = {styles.ImageIconStyle} 
                     /> 
                     <View style={styles.SeparatorLine} /> 
