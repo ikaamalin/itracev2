@@ -14,3 +14,7 @@ export { default as Scanner } from './Scanner/Scanner'
 
 export { default as ProfilePage } from './ProfilePage/ProfilePage'
 
+export { default as SopPage } from './SopPage/SopPage'
+
+export { default as HelpPage } from './HelpPage/HelpPage'
+

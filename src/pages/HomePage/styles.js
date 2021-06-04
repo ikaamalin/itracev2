@@ -37,15 +37,6 @@ export default StyleSheet.create({
          
     },
 
-    input: {
-        height: 48,
-        borderRadius: 5,
-        overflow: 'hidden',
-        backgroundColor: 'white',
-        paddingLeft: 16,
-        flex: 1,
-        marginRight: 5
-    },
     button: {
         height: 47,
         borderRadius: 5,
@@ -54,22 +45,20 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center'
     },
+
     buttonText: {
         color: 'white',
         fontSize: 16
     },
-    listContainer: {
-        marginTop: 20,
-        padding: 20,
+
+    footerView: {
+        flex: 1,
+        alignItems: "center",
+        marginTop: 20
     },
-    entityContainer: {
-        marginTop: 16,
-        borderBottomColor: '#cccccc',
-        borderBottomWidth: 1,
-        paddingBottom: 16
-    },
-    entityText: {
-        fontSize: 20,
-        color: '#333333'
+    footerText: {
+        fontSize: 16,
+        color: '#2e2e2d'
     }
+
 })

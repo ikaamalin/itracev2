@@ -13,6 +13,14 @@ export default function HomePage({navigation}) {
         navigation.navigate('Profile')
     }
 
+    const onSOPPress = () => {
+        navigation.navigate('SOP')
+    }
+
+    const onHelpPress = () => {
+        navigation.navigate('Helpdesk')
+    }
+
     const onLogoutPress = () => {
         firebase
             .auth()
@@ -42,11 +50,33 @@ export default function HomePage({navigation}) {
                     <View style={styles.SeparatorLine} /> 
              </TouchableOpacity> 
 
+             <TouchableOpacity 
+                onPress={() => onSOPPress()}> 
+                    <Image  
+                        source = {require('../../../assets/sop.png')}  
+                        style = {styles.ImageIconStyle} 
+                    /> 
+                    <View style={styles.SeparatorLine} /> 
+             </TouchableOpacity> 
+
+             <TouchableOpacity 
+                onPress={() => onHelpPress()}> 
+                    <Image  
+                        source = {require('../../../assets/helpdesk.png')}  
+                        style = {styles.ImageIconStyle} 
+                    /> 
+                    <View style={styles.SeparatorLine} /> 
+             </TouchableOpacity> 
+
             <TouchableOpacity
                     style={styles.button}
                     onPress={() => onLogoutPress()}>
                     <Text style={styles.buttonTitle}>Log Out</Text>
             </TouchableOpacity>
+
+            <View style={styles.footerView}>
+                <Text style = {styles.footerText}> {"\n"}{"\n"} © Start-Up; 2021</Text>
+            </View>
 
 
             </View>

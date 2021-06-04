@@ -11,6 +11,8 @@ import { LoginPage,
           CheckinPage, 
           Scanner,
           ProfilePage,
+          SopPage,
+          HelpPage,
         } from './src/pages'
 import {decode, encode} from 'base-64'
 if (!global.btoa) {  global.btoa = encode }
@@ -53,8 +55,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-          <Stack.Screen name="Home">
-            {props => <HomePage {...props} extraData={user} />}</Stack.Screen>
+          <Stack.Screen name="Checkin">
+            {props => <CheckinPage {...props} extraData={user} />}</Stack.Screen>
             <Stack.Screen 
               name="Login" 
               component={LoginPage} 
@@ -73,8 +75,8 @@ export default function App() {
               component={ displayAssess }
               options = {{ title: 'Quarantine Health Assessment'}} />
             <Stack.Screen 
-              name="Checkin" 
-              component={ CheckinPage }
+              name="Home" 
+              component={ HomePage }
               options = {{ title: 'Home'}} />
             <Stack.Screen 
               name="Scanner" 
@@ -84,6 +86,14 @@ export default function App() {
               name="Profile" 
               component={ ProfilePage }
               options = {{ title: 'Profile'}} />
+            <Stack.Screen 
+              name="SOP" 
+              component={ SopPage }
+              options = {{ title: 'Current Standard of Procedure'}} />
+            <Stack.Screen 
+              name="Helpdesk" 
+              component={ HelpPage }
+              options = {{ title: 'Help Desk'}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

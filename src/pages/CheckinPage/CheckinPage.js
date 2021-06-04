@@ -55,6 +55,10 @@ class CheckinPage extends Component {
                     onPress={() => this.props.navigation.navigate('Home')}>
                     <Text style={styles.buttonTitle}>Menu Page</Text>
             </TouchableOpacity>
+
+            <View style={styles.footerView}>
+                    <Text style = {styles.footerText}> {"\n"}{"\n"} © Start-Up; 2021</Text>
+            </View>
             
         </KeyboardAwareScrollView>
       </View>

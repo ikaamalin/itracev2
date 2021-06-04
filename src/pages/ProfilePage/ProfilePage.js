@@ -25,7 +25,7 @@ class ProfilePage extends Component {
           if (res.exists) {
             const user = res.data();
             this.setState({
-              key: res.id,
+              
               fullName: user.fullName,
               matricNum: user.matricNum,
               kulliyyah: user.kulliyyah,
@@ -46,7 +46,9 @@ class ProfilePage extends Component {
       }
     
       updateUser() {
-        const updateDBRef = firebase.firestore().collection('users').doc(this.state.key);
+        const updateDBRef = firebase.firestore()
+          .collection('users')
+          .where("authorID", "==", firebase.auth().currentUser.uid)
         updateDBRef.set({
           fullName: this.state.fullName,
           matricNum: this.state.matricNum,
@@ -55,7 +57,6 @@ class ProfilePage extends Component {
           address: this.state.address,
         }).then((docRef) => {
           this.setState({
-            key: '',
             fullName: '',
             matricNum: '',
             kulliyyah: '',

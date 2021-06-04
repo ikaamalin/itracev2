@@ -5,26 +5,13 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center'
     },
-    title: {
 
-    },
     logo: {
         flex: 1,
         height: 200,
         width: 160,
         alignSelf: "center",
         margin: 30
-    },
-    input: {
-        height: 48,
-        borderRadius: 5,
-        overflow: 'hidden',
-        backgroundColor: 'white',
-        marginTop: 10,
-        marginBottom: 10,
-        marginLeft: 30,
-        marginRight: 30,
-        paddingLeft: 16
     },
 
     word: {
@@ -34,20 +21,12 @@ export default StyleSheet.create({
         marginTop: 10,
     }, 
 
-    checkboxContainer: {
-        flexDirection: "row",
-        marginLeft: 30,
-        marginBottom: -20,
-        marginTop: 10,
-      },
-
-      checkbox: {
-        alignSelf: "center",
-      },
-
-      label: {
-        margin: 8,
-      },
+    header: {
+        flex: 1,
+        marginLeft: 500,
+        marginTop: 50,
+        fontSize: 30,
+    },
 
     button: {
         backgroundColor: '#252222',
@@ -59,23 +38,21 @@ export default StyleSheet.create({
         alignItems: "center",
         justifyContent: 'center'
     },
+
     buttonTitle: {
         color: 'white',
         fontSize: 16,
         fontWeight: "bold"
     },
+
     footerView: {
         flex: 1,
         alignItems: "center",
         marginTop: 20
     },
+    
     footerText: {
         fontSize: 16,
         color: '#2e2e2d'
-    },
-    footerLink: {
-        color: "#788eec",
-        fontWeight: "bold",
-        fontSize: 16
     }
 })
