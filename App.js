@@ -82,10 +82,9 @@ export default function App() {
               name="Scanner" 
               component={ Scanner }
               options = {{ title: 'Scan QR Code'}} />
-            <Stack.Screen 
-              name="Profile" 
-              component={ ProfilePage }
-              options = {{ title: 'Profile'}} />
+             <Stack.Screen name="Profile" options={{title: 'Profile'}}>
+            {props => <ProfilePage {...props} extraData={user}/>}
+            </Stack.Screen>
             <Stack.Screen 
               name="SOP" 
               component={ SopPage }
